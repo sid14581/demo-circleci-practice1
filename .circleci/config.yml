@@ -19,10 +19,9 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t circleci_prac1 -t sid716/circleci_prac1:latest .
+            docker build -t circleci_prac1 -t sid716/circleci_prac1:1 .
             echo $DOCKER_PASSWORD | docker login -u sid716 --password-stdin
-            docker push sid716/circleci_prac1:latest            
-
+            docker push sid716/circleci_prac1:1            
 
 workflows:
   build_test:
